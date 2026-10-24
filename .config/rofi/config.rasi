@@ -8,4 +8,4 @@ configuration {
 }
 
 
-@theme "/home/fierzza/.config/rofi/noctalia.rasi"
+@theme "noctalia.rasi"

@@ -70,12 +70,13 @@ NEWLINE=$'\n'
 PROMPT="${NEWLINE}%K{#CD7B91}%F{#f7e7bb} %n %K{#875160} %~ %f%k ❯ "
 
 # syntax highlighting
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+elif [ -f /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 
 export PATH="$HOME/.local/bin:$PATH"
-
-# opencode
-export PATH=/home/ricky/.opencode/bin:$PATH
 
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
@@ -86,4 +87,4 @@ esac
 # pnpm end
 
 # opencode
-export PATH=/home/fierzza/.opencode/bin:$PATH
+[ -d "$HOME/.opencode/bin" ] && export PATH="$HOME/.opencode/bin:$PATH"

@@ -10,7 +10,8 @@
 PULSE_SOURCE=echo-cancel-source
 export PULSE_SOURCE
 
-VESKTOP_BIN=/home/fierzza/BuiltApps/Vesktop/dist/linux-unpacked/vesktop
+VESKTOP_BIN="${VESKTOP_BIN:-$HOME/.local/bin/vesktop}"
+[ -x "$VESKTOP_BIN" ] || VESKTOP_BIN="$(command -v vesktop 2>/dev/null || command -v vivaldi 2>/dev/null || true)"
 
 if [ ! -x "$VESKTOP_BIN" ]; then
 	echo "vesktop-aec: cannot find $VESKTOP_BIN" >&2
