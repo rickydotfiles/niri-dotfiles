@@ -38,3 +38,7 @@ dist/
 
 # Misc
 Thumbs.db
+
+# Neovim runtime files
+.config/nvim/lua/config/saved_theme
+saved_theme

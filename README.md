@@ -112,7 +112,7 @@ Install these via your package manager. Package names are given for Void Linux (
 ### 1. Cloning
 
 ```bash
-git clone https://github.com/rickydotfiles/dotfiles.git ~/dotfiles
+git clone https://github.com/<your-username>/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ```
 
@@ -201,3 +201,10 @@ Check `~/.config/niri/config.kdl` for the complete and up-to-date keybindings.
 - **Shell config** - `.zshrc` sources optional files like `~/.config/shell/alias` and `~/.config/shell/vars` if they exist. Create them if you need custom aliases/vars.
 - **GTK theme** - `Moga-Pink` cursor theme is referenced; install it or change it in `niri/config.kdl` and GTK settings.
 - **Scripts** - Custom scripts in `.local/bin/` may depend on tools like `wpctl`, `playerctl`, etc. Make sure they're installed.
+
+## Notes on first use
+
+- **Git identity**: The included `.gitconfig` has placeholder values. Update them with `git config --global user.name "Your Name"` and `git config --global user.email "you@example.com"`, or edit `~/.gitconfig` after installation.
+- **niri autostart**: `.zprofile` will automatically start niri on `tty1` if no display server is running. If you use a display manager or a different session, comment this out.
+- **Fonts & cursors**: Install a Nerd Font (e.g. JetBrainsMono Nerd Font) and your preferred cursor/icon themes. Update `cursor { xcursor-theme ... }` in `~/.config/niri/config.kdl` if needed.
+- **Noctalia**: Only theme fragments are included. If you installed Noctalia via AUR/source, configure your bar layout/widgets through Noctalia itself - colors will match but the layout won't be identical to this rice.
