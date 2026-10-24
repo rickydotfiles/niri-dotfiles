@@ -1,0 +1,11 @@
+font-family = JetbrainsMono NF Medium
+window-padding-x = 2
+background = #000
+background-opacity = 0.8
+confirm-close-surface = false
+keybind = super+shift+d=toggle_window_decorations
+keybind = ctrl+shift+up=new_split:up
+keybind = ctrl+shift+down=new_split:down
+keybind = ctrl+shift+left=new_split:left
+keybind = ctrl+shift+right=new_split:right
+theme = noctalia

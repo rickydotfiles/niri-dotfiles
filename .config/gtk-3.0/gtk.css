@@ -1,0 +1,402 @@
+@import url("noctalia.css");
+
+/* =============================================
+   Nemo – full black + Noctalia pink accents
+   ============================================= */
+
+/* ── base palette ─────────────────────────── */
+@define-color bg           rgba(0, 0, 0, 0.80);
+@define-color bg_secondary rgba(0, 0, 0, 0.80);
+@define-color bg_widget    rgba(0, 0, 0, 0.80);
+@define-color fg           #efdfe0;
+@define-color pink         #ffb1c1;
+@define-color pink_dark    #d4899c;
+@define-color pink_fg      #5c152b;
+
+/* ── global ───────────────────────────────── */
+* {
+    background-color: @bg;
+    color: @fg;
+    -gtk-outline-radius: 0;
+}
+
+/* ── window chrome ────────────────────────── */
+nemo-window,
+nemo-window.background,
+window.background,
+decoration {
+    background-color: @bg;
+}
+
+headerbar,
+headerbar *,
+.titlebar,
+.titlebar * {
+    background-color: @bg;
+    color: @fg;
+    box-shadow: none;
+    border: none;
+}
+
+/* ── main content area ────────────────────── */
+.view,
+.view.background,
+textview,
+textview text,
+iconview,
+iconview.background,
+TreeView,
+TreeView.view,
+ListView,
+CIconView,
+nemo-window .view,
+nemo-window .view:hover {
+    background-color: @bg;
+    color: @fg;
+}
+
+/* ── sidebar ──────────────────────────────── */
+.sidebar,
+.sidebar.background,
+.sidebar *,
+nemo-window .sidebar,
+placessidebar,
+placessidebar row,
+placessidebar row:selected,
+.sidebar row:hover {
+    background-color: @bg_secondary;
+    color: @fg;
+}
+
+.sidebar row:selected,
+.sidebar row:selected:hover,
+placessidebar row:selected,
+placessidebar row:selected:hover {
+    background-color: @pink;
+    color: @pink_fg;
+}
+
+/* ── selected items ───────────────────────── */
+:selected,
+:selected *,
+:selected:focus,
+TreeView:selected,
+TreeView:selected:focus,
+ListView:selected,
+ListView:selected:focus,
+iconview:selected,
+iconview:selected:focus,
+row:selected,
+row:selected:focus,
+row:hover {
+    background-color: @pink;
+    color: @pink_fg;
+}
+
+/* ── hover ────────────────────────────────── */
+.view:hover,
+TreeView:hover,
+ListView:hover,
+iconview:hover,
+row:hover {
+    background-color: @bg_widget;
+    color: @fg;
+}
+
+/* ── buttons ──────────────────────────────── */
+button,
+button.background {
+    background-color: @bg_widget;
+    color: @fg;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    padding: 4px 10px;
+}
+
+button:hover,
+button.background:hover {
+    background-color: @pink;
+    color: @pink_fg;
+    border-color: @pink;
+}
+
+button:active,
+button.background:active {
+    background-color: @pink_dark;
+    color: @pink_fg;
+    border-color: @pink_dark;
+}
+
+button:checked,
+button.background:checked,
+button.suggested-action,
+button.suggested-action background {
+    background-color: @pink;
+    color: @pink_fg;
+    border-color: @pink;
+}
+
+/* ── links ────────────────────────────────── */
+button.link,
+label:selected,
+label:selected:focus {
+    color: @pink;
+}
+
+button.link:hover {
+    color: @pink_dark;
+}
+
+/* ── entries / search ─────────────────────── */
+entry,
+entry.background {
+    background-color: @bg_widget;
+    color: @fg;
+    border: 1px solid #000000;
+    border-radius: 6px;
+    caret-color: @pink;
+}
+
+entry:focus,
+entry.background:focus {
+    border-color: @pink;
+    box-shadow: 0 0 0 1px @pink;
+}
+
+entry selection,
+entry selection:focus {
+    background-color: @pink;
+    color: @pink_fg;
+}
+
+/* ── scrollbar ────────────────────────────── */
+scrollbar,
+scrollbar.background {
+    background-color: transparent;
+}
+
+scrollbar slider,
+scrollbar.background slider {
+    background-color: #000000;
+    border-radius: 99px;
+    min-width: 6px;
+    min-height: 6px;
+}
+
+scrollbar slider:hover,
+scrollbar.background slider:hover {
+    background-color: @pink;
+}
+
+scrollbar slider:active,
+scrollbar.background slider:active {
+    background-color: @pink_dark;
+}
+
+/* ── checkboxes / switches / radios ───────── */
+check,
+check:checked,
+check:hover {
+    background-color: transparent;
+    color: @fg;
+    border: 2px solid #000000;
+    border-radius: 3px;
+    min-width: 16px;
+    min-height: 16px;
+
+check:checked {
+    background-color: @pink;
+    color: @pink_fg;
+    border-color: @pink;
+}
+
+check:hover {
+    border-color: @pink;
+}
+
+radio,
+radio:checked,
+radio:hover {
+    background-color: transparent;
+    color: @fg;
+    border: 2px solid #000000;
+    border-radius: 99px;
+    min-width: 16px;
+    min-height: 16px;
+
+radio:checked {
+    background-color: @pink;
+    color: @pink_fg;
+    border-color: @pink;
+}
+
+radio:hover {
+    border-color: @pink;
+}
+
+switch,
+switch:hover {
+background-color: @bg_widget;
+    border: 1px solid #000000;
+    border-radius: 99px;
+
+switch:checked {
+    background-color: @pink;
+    border-color: @pink;
+}
+
+switch slider {
+    background-color: @fg;
+    border-radius: 99px;
+}
+
+switch:checked slider {
+    background-color: @pink_fg;
+}
+
+/* ── progress bars ────────────────────────── */
+progressbar,
+progressbar background,
+progressbar trough,
+progressbar trough background {
+    background-color: @bg_widget;
+    border-radius: 99px;
+}
+
+progressbar progress,
+progressbar progress background {
+    background-color: @pink;
+    border-radius: 99px;
+}
+
+/* ── scales / sliders ─────────────────────── */
+scale,
+scale trough,
+scale trough background {
+    background-color: @bg_widget;
+}
+
+scale highlight,
+scale highlight background {
+    background-color: @pink;
+}
+
+scale slider {
+    background-color: @pink;
+    border-radius: 99px;
+    border: 2px solid @pink_fg;
+    min-width: 14px;
+    min-height: 14px;
+}
+
+scale slider:hover {
+    background-color: @pink_dark;
+    border-color: @pink_dark;
+}
+
+/* ── tabs / notebook ──────────────────────── */
+notebook,
+notebook.background,
+notebook > header,
+notebook > header > tabs > tab {
+    background-color: @bg;
+    color: @fg;
+}
+
+notebook > header > tabs > tab:checked {
+    background-color: @bg;
+    color: @pink;
+    border-bottom: 2px solid @pink;
+}
+
+notebook > header > tabs > tab:hover:not(:checked) {
+    color: @pink;
+}
+
+notebook > header {
+    background-color: @bg;
+    border: none;
+}
+
+/* ── popover / dialog / menu ──────────────── */
+popover,
+popover.background,
+dialog,
+dialog.background,
+messagedialog,
+messagedialog.background,
+menu,
+menu.background,
+menubar,
+menubar.background {
+    background-color: @bg_secondary;
+    color: @fg;
+}
+
+menu menuitem:hover,
+menu menuitem:selected,
+popover modelbutton:hover {
+    background-color: @pink;
+    color: @pink_fg;
+}
+
+/* ── tooltips ─────────────────────────────── */
+tooltip,
+tooltip.background,
+tooltip * {
+    background-color: @bg_widget;
+    color: @fg;
+    border-radius: 6px;
+}
+
+/* ── paned handles ────────────────────────── */
+paned > handle {
+    background-color: @bg;
+}
+
+paned > handle:hover {
+    background-color: @pink;
+}
+
+/* ── floating bar (nemo status bar) ───────── */
+.floating-bar,
+nemo-window .floating-bar {
+    background-color: @bg;
+    color: @fg;
+}
+
+/* ── breadcrumbs / path bar ───────────────── */
+pathbar button,
+.path-bar button {
+    background-color: @bg;
+    color: @fg;
+    border-radius: 0;
+}
+
+pathbar button:checked,
+.path-bar button:checked {
+    background-color: @pink;
+    color: @pink_fg;
+}
+
+pathbar button:hover,
+.path-bar button:hover {
+    background-color: @bg_widget;
+}
+
+/* ── frames / separators ──────────────────── */
+frame > border,
+separator {
+    background-color: #000000;
+}
+
+/* ── selection handles ────────────────────── */
+*::selection {
+    background-color: @pink;
+    color: @pink_fg;
+}
+
+/* ── scrollbar through ────────────────────── */
+scrollbar trough {
+    background-color: transparent;
+}

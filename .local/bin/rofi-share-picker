@@ -1,0 +1,22 @@
+#!/bin/sh
+# Rofi picker for screen sharing only.
+#
+# Spawned by xdg-desktop-portal-wlr (see
+# ~/.config/xdg-desktop-portal-wlr/config) whenever an application asks to
+# share a screen: Firefox, Discord, Meet, OBS, ...
+#
+# The portal writes the list of sources on stdin:
+#   Monitor: DP-1 BOE Display 000
+#   Monitor: HDMI-A-1 Stargate Technology
+#   Window: Some Window Title (wayland-id)
+# and reads the chosen entry back from stdout. Rofi's dmenu mode already does
+# exactly that, so the entries are passed through untouched - do not reformat
+# them here, the portal compares the output byte for byte.
+#
+# Escape / empty output = sharing declined.
+
+exec rofi -dmenu \
+	-i \
+	-no-custom \
+	-p "Share:" \
+	-theme "$HOME/.config/rofi/share.rasi"

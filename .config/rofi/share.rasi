@@ -1,0 +1,78 @@
+// Theme for the screen-share picker only (~/.local/bin/rofi-share-picker).
+// Deliberately separate from config.rasi / noctalia.rasi so that sharing a
+// screen never changes how rofi behaves anywhere else.
+
+* {
+    bg:        #191113;
+    bg-alt:    #261d1f;
+    fg:        #efdfe0;
+    fg-dim:    #a18b8f;
+    accent:    #ffb1c1;
+    accent-fg: #5c152b;
+    border:    #a18b8f;
+}
+
+configuration {
+    font:       "JetBrainsMono Nerd Font Medium 11";
+    border:     none;
+    display-drun: " ";
+}
+
+window {
+    background-color: @bg;
+    text-color:      @fg;
+    border:          2px;
+    border-color:    @border;
+    border-radius:   10px;
+    padding:         14px;
+    width:           34%;
+}
+
+mainbox {
+    background-color: transparent;
+    spacing:          10px;
+}
+
+inputbar {
+    background-color: @bg-alt;
+    text-color:      @fg;
+    border-radius:    6px;
+    padding:          10px 12px;
+    spacing:          10px;
+    text-color-prompt: @accent;
+    text-color-entry:  @fg;
+}
+
+prompt, entry {
+    background-color: transparent;
+}
+
+listview {
+    background-color: transparent;
+    spacing:          4px;
+    lines:            8;
+    fixed-height:     false;
+}
+
+element {
+    background-color: transparent;
+    text-color:       @fg;
+    border-radius:    6px;
+    padding:          8px 10px;
+    spacing:          10px;
+}
+
+element selected {
+    background-color: @accent;
+    text-color:       @accent-fg;
+}
+
+element-text, element-icon {
+    background-color: transparent;
+    text-color:       inherit;
+}
+
+element-icon {
+    size: 1.2em;
+    vertical-align:   0.5;
+}

@@ -1,0 +1,62 @@
+
+
+@import url("noctalia.css");
+
+headerbar, headerbar.background,
+titlebar, titlebar.background {
+    background-color: #0d0d0d;
+}
+
+view, view.background,
+listview, listview.background,
+list, list.background,
+flowbox, flowbox.background,
+scrolledwindow, scrolledwindow.background {
+    background-color: #0d0d0d;
+}
+
+sidebar, sidebar.background,
+.navigation-sidebar {
+    background-color: #161616;
+}
+
+popover, popover.background,
+popover.background,
+dialog, dialog.background,
+message-dialog, message-dialog.background,
+menu, menu.background,
+menubar, menubar.background {
+    background-color: #161616;
+}
+
+button, button.background,
+button:hover, button.background:hover,
+button:active, button.background:active {
+    background-color: #1a1a1a;
+    color: #efdfe0;
+}
+
+entry, entry.background,
+entry:focus, entry.background:focus {
+    background-color: #1a1a1a;
+    color: #efdfe0;
+}
+
+scrollbar, scrollbar.background,
+scrollbar slider, scrollbar.background slider {
+    background-color: #1a1a1a;
+}
+
+:selected, :selected * {
+    background-color: #ffb1c1;
+    color: #5c152b;
+}
+
+notebook, notebook.background,
+notebook > header, notebook > header > tabs > tab {
+    background-color: #0d0d0d;
+}
+
+easyeffects, easyeffects.background {
+    background-color: #0d0d0d;
+}

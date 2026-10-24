@@ -1,0 +1,21 @@
+#!/bin/sh
+# ---------------------------------------------------------------------------
+# Launch Vesktop with the echo-cancelled microphone as its default input.
+#
+# PULSE_SOURCE makes libpulse hand Vesktop the echo-cancelled mic whenever
+# Discord's input device is set to "Default". Discord remembers an explicit
+# device choice, so also pick "Echo-Cancel Source" once in
+# Settings -> Voice & Video -> Input Device.
+# ---------------------------------------------------------------------------
+PULSE_SOURCE=echo-cancel-source
+export PULSE_SOURCE
+
+VESKTOP_BIN=/home/fierzza/BuiltApps/Vesktop/dist/linux-unpacked/vesktop
+
+if [ ! -x "$VESKTOP_BIN" ]; then
+	echo "vesktop-aec: cannot find $VESKTOP_BIN" >&2
+	echo "Edit VESKTOP_BIN in $0 to point at your Vesktop binary." >&2
+	exit 1
+fi
+
+exec "$VESKTOP_BIN" "$@"
