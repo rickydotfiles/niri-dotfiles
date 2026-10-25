@@ -33,7 +33,12 @@ My personal Linux setup — a Wayland tiling compositor rice using [niri](https:
 
 ## Screenshots
 
-*Add your screenshots here.*
+![Screenshot 1](<ScreenShots and Videos/ex1.png>)
+![Screenshot 2](<ScreenShots and Videos/ex2.png>)
+![Screenshot 3](<ScreenShots and Videos/ex3.png>)
+![Screenshot 4](<ScreenShots and Videos/ex4.png>)
+![Screenshot 5](<ScreenShots and Videos/ex5.png>)
+![Screenshot 6](<ScreenShots and Videos/ex6.png>)
 
 ## Repository layout
 
@@ -208,3 +213,13 @@ Check `~/.config/niri/config.kdl` for the complete and up-to-date keybindings.
 - **niri autostart**: `.zprofile` will automatically start niri on `tty1` if no display server is running. If you use a display manager or a different session, comment this out.
 - **Fonts & cursors**: Install a Nerd Font (e.g. JetBrainsMono Nerd Font) and your preferred cursor/icon themes. Update `cursor { xcursor-theme ... }` in `~/.config/niri/config.kdl` if needed.
 - **Noctalia**: Only theme fragments are included. If you installed Noctalia via AUR/source, configure your bar layout/widgets through Noctalia itself - colors will match but the layout won't be identical to this rice.
+
+## Videos
+
+[![Video demo 1](https://img.shields.io/badge/Video-Demo%201-ff69b4)](<ScreenShots and Videos/vid-ex1.mp4>)
+
+[![Video demo 2](https://img.shields.io/badge/Video-Demo%202-ff69b4)](<ScreenShots and Videos/vid-ex2.mp4>)
+
+<video src="ScreenShots%20and%20Videos/vid-ex1.mp4" controls width="100%"></video>
+
+<video src="ScreenShots%20and%20Videos/vid-ex2.mp4" controls width="100%"></video>
