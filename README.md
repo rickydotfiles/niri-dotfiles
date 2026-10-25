@@ -33,12 +33,34 @@ My personal Linux setup — a Wayland tiling compositor rice using [niri](https:
 
 ## Screenshots
 
-![Screenshot 1](<ScreenShots and Videos/ex1.png>)
-![Screenshot 2](<ScreenShots and Videos/ex2.png>)
-![Screenshot 3](<ScreenShots and Videos/ex3.png>)
-![Screenshot 4](<ScreenShots and Videos/ex4.png>)
-![Screenshot 5](<ScreenShots and Videos/ex5.png>)
-![Screenshot 6](<ScreenShots and Videos/ex6.png>)
+<table>
+  <tr>
+    <td rowspan="3" width="60%">
+      <img src="ScreenShots%20and%20Videos/ex1.png" alt="Screenshot 1" />
+    </td>
+    <td width="40%">
+      <img src="ScreenShots%20and%20Videos/ex2.png" alt="Screenshot 2" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="ScreenShots%20and%20Videos/ex3.png" alt="Screenshot 3" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="ScreenShots%20and%20Videos/ex4.png" alt="Screenshot 4" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="ScreenShots%20and%20Videos/ex5.png" alt="Screenshot 5" />
+    </td>
+    <td>
+      <img src="ScreenShots%20and%20Videos/ex6.png" alt="Screenshot 6" />
+    </td>
+  </tr>
+</table>
 
 ## Repository layout
 
