@@ -113,9 +113,25 @@ output "eDP-1" {
 // Settings that influence how windows are positioned and sized.
 // Find more information on the wiki:
 // https://niri-wm.github.io/niri/Configuration:-Layout
+
+		// Make the wallpaper stationary in the overview (Noctalia)
+layer-rule {
+    match namespace="^noctalia-wallpaper$"
+    place-within-backdrop true
+}
+
+// Optionally, disable the workspace shadows in the overview.
+overview {
+    workspace-shadow {
+        off
+    }
+}
 layout {
     // Set gaps around windows in logical pixels.
     gaps 8
+
+    // Transparent workspace background so the wallpaper shows through in the overview.
+    background-color "transparent"
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
