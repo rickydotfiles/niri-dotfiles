@@ -33,34 +33,17 @@ My personal Linux setup — a Wayland tiling compositor rice using [niri](https:
 
 ## Screenshots
 
-<table>
-  <tr>
-    <td rowspan="3" width="60%">
-      <img src="ScreenShots%20and%20Videos/ex1.png" alt="Screenshot 1" />
-    </td>
-    <td width="40%">
-      <img src="ScreenShots%20and%20Videos/ex2.png" alt="Screenshot 2" />
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="ScreenShots%20and%20Videos/ex3.png" alt="Screenshot 3" />
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="ScreenShots%20and%20Videos/ex4.png" alt="Screenshot 4" />
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="ScreenShots%20and%20Videos/ex5.png" alt="Screenshot 5" />
-    </td>
-    <td>
-      <img src="ScreenShots%20and%20Videos/ex6.png" alt="Screenshot 6" />
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="ScreenShots%20and%20Videos/ex1.png" alt="Screenshot 1" width="100%" />
+</p>
+
+<p align="center">
+  <img src="ScreenShots%20and%20Videos/ex2.png" alt="Screenshot 2" width="19%" />
+  <img src="ScreenShots%20and%20Videos/ex3.png" alt="Screenshot 3" width="19%" />
+  <img src="ScreenShots%20and%20Videos/ex4.png" alt="Screenshot 4" width="19%" />
+  <img src="ScreenShots%20and%20Videos/ex5.png" alt="Screenshot 5" width="19%" />
+  <img src="ScreenShots%20and%20Videos/ex6.png" alt="Screenshot 6" width="19%" />
+</p>
 
 ## Repository layout
 
